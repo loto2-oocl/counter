@@ -12,10 +12,18 @@ class MultipleCounter extends Component {
     };
   }
 
-  onChange = (event) => {
-    this.setState({
-      size: event.target.value,
-    });
+  setSize = (newSize) => {
+    this.setState(prevState => ({
+      ...prevState,
+      size: newSize,
+    }));
+  }
+
+  setSum = (newSum) => {
+    this.setState(prevState => ({
+      ...prevState,
+      sum: newSum,
+    }));
   }
 
   render() {
