@@ -8,14 +8,23 @@ class CounterGroup extends Component {
     return Array.from(Array(number).keys());
   }
 
+  increaseSum = (increment) => {
+    this.props.setSum(this.props.sum + increment);
+  }
+
+  decreaseSum = (decrement) => {
+    this.props.setSum(this.props.sum - decrement);
+  }
+
   render() {
     const { size } = this.props;
+    const arraySize = this.initArraySize(size);
 
     return (
       <div>
         {
-          this.initArraySize(size).map((value) => (
-            <Counter key={value} />
+          arraySize.map((value) => (
+            <Counter key={value} increaseSum={this.increaseSum} decreaseSum={this.decreaseSum} />
           ))
         }
       </div>
