@@ -3,7 +3,9 @@ import Counter from './Counter';
 
 class CounterGroup extends Component {
   initArraySize(size) {
-    return Array.from(Array(size).keys());
+    const number = Number(size) > 0 ? Number(size) : 0;
+
+    return Array.from(Array(number).keys());
   }
 
   render() {
