@@ -19,6 +19,10 @@ class MultipleCounter extends Component {
       ...prevState,
       size: newSize,
     }));
+
+    if (newSize <= 0) {
+      this.setSum(0);
+    }
   }
 
   setSum = (newSum) => {
