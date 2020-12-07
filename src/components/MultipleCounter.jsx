@@ -8,6 +8,7 @@ class MultipleCounter extends Component {
 
     this.state = {
       size: 0,
+      sum: 0,
     };
   }
 
