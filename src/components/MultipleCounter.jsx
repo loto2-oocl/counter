@@ -21,7 +21,7 @@ class MultipleCounter extends Component {
     }));
 
     if (newSize <= 0) {
-      this.setSum(0);
+      this.resetSum();
     }
   }
 
@@ -30,6 +30,10 @@ class MultipleCounter extends Component {
       ...prevState,
       sum: newSum,
     }));
+  }
+
+  resetSum = () => {
+    this.setSum(0);
   }
 
   render() {
