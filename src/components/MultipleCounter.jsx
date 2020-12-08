@@ -19,21 +19,20 @@ class MultipleCounter extends Component {
       ...prevState,
       size: newSize,
     }));
-
-    if (newSize <= 0) {
-      this.resetSum();
-    }
   }
 
-  setSum = (newSum) => {
+  increaseSum = (increment) => {
     this.setState(prevState => ({
       ...prevState,
-      sum: newSum,
+      sum: prevState.sum + increment,
     }));
   }
 
-  resetSum = () => {
-    this.setSum(0);
+  decreaseSum = (decrement) => {
+    this.setState(prevState => ({
+      ...prevState,
+      sum: prevState.sum - decrement,
+    }));
   }
 
   render() {
@@ -43,7 +42,7 @@ class MultipleCounter extends Component {
       <div>
         <CounterSizeGenerator size={size} setSize={this.setSize} />
         <CounterGroupSum sum={sum} />
-        <CounterGroup size={size} sum={sum} setSum={this.setSum} />
+        <CounterGroup size={size} sum={sum} increaseSum={this.increaseSum} decreaseSum={this.decreaseSum} />
       </div>
     )
   }
