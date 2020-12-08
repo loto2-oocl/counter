@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 class CounterSizeGenerator extends Component {
   handleChange = (event) => {
-    this.props.setSize(event.target.value);
+    const input = event.target.value;
+    const size = Number(input) > 0 ? Number(input) : 0;
+    this.props.updateCounterSize(size);
   };
 
   render() {
-    const { size } = this.props;
-
     return (
       <div>
-        <input type="number" value={size} onChange={this.handleChange} />
+        <input type="number" onChange={this.handleChange} />
       </div>
     );
   }
