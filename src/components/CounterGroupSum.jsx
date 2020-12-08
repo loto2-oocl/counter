@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class CounterGroupSum extends Component {
   render() {
@@ -6,11 +6,9 @@ class CounterGroupSum extends Component {
 
     return (
       <div>
-        <span>
-          Total: {sum}
-        </span>
+        <span>Total: {sum}</span>
       </div>
-    )
+    );
   }
 }
 

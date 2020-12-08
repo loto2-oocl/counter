@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Counter extends Component {
   DEFAULT_STEP_SIZE = 1;
@@ -22,20 +22,20 @@ class Counter extends Component {
   }
 
   onIncrease = () => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       number: prevState.number + this.DEFAULT_STEP_SIZE,
     }));
 
     this.props.increaseSum(this.DEFAULT_STEP_SIZE);
-  }
+  };
 
   onDecrease = () => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       number: prevState.number - this.DEFAULT_STEP_SIZE,
     }));
 
     this.props.decreaseSum(this.DEFAULT_STEP_SIZE);
-  }
+  };
 
   render() {
     return (
