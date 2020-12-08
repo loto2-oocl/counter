@@ -15,22 +15,19 @@ class MultipleCounter extends Component {
   }
 
   setSize = (newSize) => {
-    this.setState(prevState => ({
-      ...prevState,
+    this.setState({
       size: newSize,
-    }));
+    });
   }
 
   increaseSum = (increment) => {
     this.setState(prevState => ({
-      ...prevState,
       sum: prevState.sum + increment,
     }));
   }
 
   decreaseSum = (decrement) => {
     this.setState(prevState => ({
-      ...prevState,
       sum: prevState.sum - decrement,
     }));
   }
