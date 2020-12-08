@@ -17,6 +17,7 @@ class MultipleCounter extends Component {
   setSize = (newSize) => {
     this.setState({
       size: newSize,
+      sum: 0
     });
   }
 

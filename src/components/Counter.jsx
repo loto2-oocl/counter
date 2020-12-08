@@ -11,6 +11,16 @@ class Counter extends Component {
     };
   }
 
+  shouldComponentUpdate(nextProps) {
+    if (nextProps.size !== this.props.size) {
+      this.setState({
+        number: 0,
+      });
+    }
+
+    return true;
+  }
+
   onIncrease = () => {
     this.setState(prevState => ({
       number: prevState.number + this.DEFAULT_STEP_SIZE,
@@ -25,10 +35,6 @@ class Counter extends Component {
     }));
 
     this.props.decreaseSum(this.DEFAULT_STEP_SIZE);
-  }
-
-  componentWillUnmount() {
-    this.props.decreaseSum(this.state.number);
   }
 
   render() {
