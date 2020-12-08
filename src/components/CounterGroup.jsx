@@ -3,9 +3,7 @@ import CounterContainer from '../containers/CounterContainer';
 
 class CounterGroup extends Component {
   initArraySize(size) {
-    const number = Number(size) > 0 ? Number(size) : 0;
-
-    return Array.from(Array(number).keys());
+    return Array.from(Array(size).keys());
   }
 
   render() {
@@ -15,12 +13,7 @@ class CounterGroup extends Component {
     return (
       <div>
         {arraySize.map((value) => (
-          <CounterContainer
-            key={value}
-            size={size}
-            increaseSum={this.props.increaseSum}
-            decreaseSum={this.props.decreaseSum}
-          />
+          <CounterContainer key={value} />
         ))}
       </div>
     );
