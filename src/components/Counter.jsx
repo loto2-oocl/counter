@@ -26,7 +26,7 @@ class Counter extends Component {
       number: prevState.number + this.DEFAULT_STEP_SIZE,
     }));
 
-    this.props.increaseSum(this.DEFAULT_STEP_SIZE);
+    this.props.increaseSum();
   };
 
   onDecrease = () => {
@@ -34,7 +34,7 @@ class Counter extends Component {
       number: prevState.number - this.DEFAULT_STEP_SIZE,
     }));
 
-    this.props.decreaseSum(this.DEFAULT_STEP_SIZE);
+    this.props.decreaseSum();
   };
 
   render() {
