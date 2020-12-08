@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import CounterGroup from "./CounterGroup";
-import CounterGroupSum from "./CounterGroupSum";
-import CounterSizeGenerator from "./CounterSizeGenerator";
+import CounterGroup from './CounterGroup';
+import CounterGroupSum from './CounterGroupSum';
+import CounterSizeGenerator from './CounterSizeGenerator';
 
 class MultipleCounter extends Component {
   constructor(props) {

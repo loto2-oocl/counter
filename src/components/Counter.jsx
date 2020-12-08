@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Counter extends Component {
   DEFAULT_STEP_SIZE = 1;

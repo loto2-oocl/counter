@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Counter from "./HooksCounter";
+import React, { Component } from 'react';
+import Counter from './HooksCounter';
 
 class CounterGroup extends Component {
   initArraySize(size) {
