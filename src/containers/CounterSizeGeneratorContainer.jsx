@@ -2,10 +2,6 @@ import { connect } from 'react-redux';
 import { resetSum, updateCounterSize } from '../actions';
 import CounterSizeGenerator from '../components/CounterSizeGenerator';
 
-// const mapStateToProps = (state) => ({
-//   sum: state.sum,
-// });
-
 const mapDispatchToProps = (dispatch) => ({
   updateCounterSize: (size) => dispatch(updateCounterSize(size)),
   resetSum: () => dispatch(resetSum()),
